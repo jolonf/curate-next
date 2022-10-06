@@ -2,7 +2,7 @@ import React from "react";
 import { useQuery } from "thin-backend-react";
 import { createRecord, getCurrentUserId, query } from "thin-backend";
 
-import { Col, Row, Text, Container, Button, Grid } from "@nextui-org/react";
+import { Col, Row, Text, Container, Button, Grid, Spacer } from "@nextui-org/react";
 import Head from "next/head";
 import { useRouter } from 'next/router'
 
@@ -38,11 +38,9 @@ export default function MyCollections() {
                 <Text size={12} transform="uppercase" weight="bold">
                     My Collections
                 </Text>
-                <Button light auto color="secondary" css={{
-                    width: "20px",
-                    height: "20px"
-                }} onPress={createCollection}>
-                    +
+                <Spacer/>
+                <Button flat auto size="xs" onPress={createCollection}>
+                    Add
                 </Button>
             </Row>
         </Container>
